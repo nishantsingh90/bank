@@ -14,6 +14,6 @@ class DynamicSearchFilter(filters.SearchFilter):
 
 
 class BankAPIView(generics.ListCreateAPIView):
-    filter_backends = (DynamicSearchFilter)
+    filter_backends = (DynamicSearchFilter,)
     queryset = Bank.objects.all()
     serializer_class = BankSerializer
